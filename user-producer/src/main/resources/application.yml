@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: User-Service-Producer
+  cloud:
+    zookeeper:
+      connectString: localhost:2181
+server:
+  port: 8081
+
+

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: User Service Consumer
+  cloud:
+    zookeeper:
+      discovery:
+        instance-host:
+server:
+  port: 8080
+
