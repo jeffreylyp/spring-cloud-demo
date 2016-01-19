@@ -1,10 +1,12 @@
 spring:
   application:
     name: User Service Consumer
-  cloud:
-    zookeeper:
-      discovery:
-        instance-host:
+#  cloud:
+#    zookeeper:
+#      dependencies:
+#        User-Service-Producer:
+#          required: true
+#          version: 1.0.0
 server:
   port: 8080
 
