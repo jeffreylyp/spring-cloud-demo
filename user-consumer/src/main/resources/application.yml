@@ -1,6 +1,9 @@
 spring:
   application:
     name: User Service Consumer
+  cloud:
+    zookeeper:
+      connectString: localhost:2181
 #  cloud:
 #    zookeeper:
 #      dependencies:
@@ -8,5 +11,21 @@ spring:
 #          required: true
 #          version: 1.0.0
 server:
-  port: 8080
+  port: 8088
 
+feign:
+  compression:
+    request:
+      enable: true
+    response:
+      enable: true
+#  hystrix:
+#    enable: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
